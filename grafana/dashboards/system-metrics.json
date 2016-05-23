@@ -47,7 +47,7 @@
             "height": "100px",
             "panels": [
                 {
-                    "content": "## OS Metrics\n\n* Kamon provides the following metrics related to the host OS (most of the metrics gathering are achieved using [Sigar][SigarLink])\n[SigarLink]: https://support.hyperic.com/display/SIGAR/Home \"Sigar Home\"\n\n",
+                    "content": "## OS Metrics\n\n* daptiv provides the following metrics related to the host OS (most of the metrics gathering are achieved using [Sigar][SigarLink])\n[SigarLink]: https://support.hyperic.com/display/SIGAR/Home \"Sigar Home\"\n\n",
                     "editable": true,
                     "error": false,
                     "id": 16,
@@ -799,7 +799,7 @@
             "height": "25px",
             "panels": [
                 {
-                    "content": "## JVM Metrics\n* Kamon provides the following metrics related to the JVM",
+                    "content": "## JVM Metrics\n* daptiv provides the following metrics related to the JVM",
                     "editable": true,
                     "error": false,
                     "id": 15,
@@ -864,7 +864,7 @@
                     "renderer": "flot",
                     "seriesOverrides": [
                         {
-                            "alias": "stats.timers.kamon.ivantopo-desktop.system-metric.ps-scavenge-garbage-collector.garbage-collection-time.sum",
+                            "alias": "stats.timers.daptiv.ivantopo-desktop.system-metric.ps-scavenge-garbage-collector.garbage-collection-time.sum",
                             "yaxis": 2
                         },
                         {
@@ -948,7 +948,7 @@
                     "renderer": "flot",
                     "seriesOverrides": [
                         {
-                            "alias": "stats.timers.kamon.ivantopo-desktop.system-metric.ps-scavenge-garbage-collector.garbage-collection-time.sum",
+                            "alias": "stats.timers.daptiv.ivantopo-desktop.system-metric.ps-scavenge-garbage-collector.garbage-collection-time.sum",
                             "yaxis": 2
                         },
                         {

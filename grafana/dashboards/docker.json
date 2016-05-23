@@ -474,8 +474,8 @@
       {
         "allFormat": "glob",
         "current": {
-          "text": "kamon",
-          "value": "kamon"
+          "text": "daptiv",
+          "value": "daptiv"
         },
         "datasource": null,
         "includeAll": false,
@@ -485,8 +485,8 @@
         "options": [
           {
             "selected": true,
-            "text": "kamon",
-            "value": "kamon"
+            "text": "daptiv",
+            "value": "daptiv"
           }
         ],
         "query": "stats.timers.*",

@@ -1,8 +1,8 @@
 {
-  "title": "Kamon Dashboard",
-  "originalTitle": "Kamon Dashboard",
+  "title": "daptiv Dashboard",
+  "originalTitle": "daptiv Dashboard",
   "tags": [
-    "kamon",
+    "daptiv",
     "metrics",
     "actors"
   ],
@@ -42,7 +42,7 @@
       "notice": false,
       "panels": [
         {
-          "content": "This dashboard gives a simple overview metrics collected by Kamon from your application. By default the pattern in which metrics \nare reported contains the application name (see the application key in kamon-statsd's reference.conf file) and the host name from \nwhich the metrics are being collected. The filters on the upper left side let you select between these two path keys. \n\nFeel free to play with this dashboard, see how the panels are constructed and create your own dashboard according to your needs!",
+          "content": "This dashboard gives a simple overview metrics collected by daptiv from your application. By default the pattern in which metrics \nare reported contains the application name (see the application key in daptiv-statsd's reference.conf file) and the host name from \nwhich the metrics are being collected. The filters on the upper left side let you select between these two path keys. \n\nFeel free to play with this dashboard, see how the panels are constructed and create your own dashboard according to your needs!",
           "editable": true,
           "error": false,
           "id": 2,
@@ -50,7 +50,7 @@
           "mode": "markdown",
           "span": 3,
           "style": {},
-          "title": "Welcome to the Kamon Example Dashboard!",
+          "title": "Welcome to the daptiv Example Dashboard!",
           "type": "text"
         },
         {
@@ -835,7 +835,7 @@
           "zerofill": true
         },
         {
-          "content": "Whether your are manually starting/finishing TraceContexts or letting Kamon do it for you in Spray and Play! applications\nthis section contains metrics about those traces!",
+          "content": "Whether your are manually starting/finishing TraceContexts or letting daptiv do it for you in Spray and Play! applications\nthis section contains metrics about those traces!",
           "editable": true,
           "error": false,
           "id": 14,
@@ -1040,16 +1040,16 @@
       {
         "allFormat": "glob",
         "current": {
-          "text": "kamon",
-          "value": "kamon"
+          "text": "daptiv",
+          "value": "daptiv"
         },
         "datasource": null,
         "includeAll": false,
         "name": "Application",
         "options": [
           {
-            "text": "kamon",
-            "value": "kamon"
+            "text": "daptiv",
+            "value": "daptiv"
           }
         ],
         "query": "stats.timers.*",

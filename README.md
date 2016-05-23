@@ -1,14 +1,14 @@
-StatsD + Graphite + Grafana 2 + Kamon Dashboards
+StatsD + Graphite + Grafana 2 + daptiv Dashboards
 ---------------------------------------------
 
 This image contains a sensible default configuration of StatsD, Graphite and Grafana, and comes bundled with a example
-dashboard that gives you the basic metrics currently collected by Kamon for both Actors and Traces. There are two ways
+dashboard that gives you the basic metrics currently collected by daptiv for both Actors and Traces. There are two ways
 for using this image:
 
 
 ### Using the Docker Index ###
 
-This image is published under [Kamon's repository on the Docker Hub](https://hub.docker.com/u/kamon/) and all you
+This image is published under [daptiv's repository on the Docker Hub](https://hub.docker.com/u/daptiv/) and all you
 need as a prerequisite is having Docker installed on your machine. The container exposes the following ports:
 
 - `80`: the Grafana web interface.
@@ -25,8 +25,8 @@ docker run \
    --publish=81:81 \
    --publish=8125:8125/udp \
    --publish=8126:8126 \
-   --name kamon-grafana-dashboard \
-   kamon/grafana_graphite
+   --name daptiv-grafana-dashboard \
+   daptiv/grafana_graphite
 ```
 
 If you already have services running on your host that are using any of these ports, you may wish to map the container
@@ -35,7 +35,7 @@ ports to whatever you want by changing left side number in the `--publish` param
 
 ### Building the image yourself ###
 
-The Dockerfile and supporting configuration files are available in our [Github repository](https://github.com/kamon-io/docker-grafana-graphite).
+The Dockerfile and supporting configuration files are available in our [Github repository](https://github.com/daptiv-io/docker-grafana-graphite).
 This comes specially handy if you want to change any of the StatsD, Graphite or Grafana settings, or simply if you want
 to know how tha image was built. The repo also has `build` and `start` scripts to make your workflow more pleasant.
 
@@ -53,8 +53,8 @@ Once your container is running all you need to do is:
 There are several ways of using Docker volumes to persist the settings and databases of the docker-grafana-graphite container. Here is an example script that will create directories on your host and mount them into the Docker container, allowing graphite and grafana to persist data and settings between runs of the container.
 
 ```bash
-mkdir kamon-grafana-service
-cd kamon-grafana-service
+mkdir daptiv-grafana-service
+cd daptiv-grafana-service
 mkdir -p data/whisper
 mkdir -p data/elasticsearch
 mkdir -p data/grafana
@@ -69,13 +69,13 @@ docker run \
    --publish=81:81 \
    --publish=8125:8125/udp \
    --publish=8126:8126 \
-   --name kamon-grafana-dashboard \
+   --name daptiv-grafana-dashboard \
    --volume=$(pwd)/data/whisper:/opt/graphite/storage/whisper \
    --volume=$(pwd)/data/elasticsearch:/var/lib/elasticsearch \
    --volume=$(pwd)/data/grafana:/opt/grafana/data \
    --volume=$(pwd)/log/graphite:/opt/graphite/storage/log \
    --volume=$(pwd)/log/elasticsearch:/var/log/elasticsearch \
-   kamon/grafana_graphite
+   daptiv/grafana_graphite
 ```
 
 ### Now go explore! ###
@@ -84,5 +84,5 @@ We hope that you have a lot of fun with this image and that it serves it's
 purpose of making your life easier. This should give you an idea of how the dashboard looks like when receiving data
 from one of our toy applications:
 
-![Kamon Dashboard](http://kamon.io/assets/img/kamon-statsd-grafana.png)
-![System Metrics Dashboard](http://kamon.io/assets/img/kamon-system-metrics.png)
+![daptiv Dashboard](http://kamon.io/assets/img/daptiv-statsd-grafana.png)
+![System Metrics Dashboard](http://kamon.io/assets/img/daptiv-system-metrics.png)
